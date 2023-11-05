@@ -1,0 +1,21 @@
+<div>
+    <div class="center" *ngIf="isLoading">
+        <div class="loader"></div>
+    </div>
+    <div *ngIf="!isLoading && isError">
+        <div class="center">
+            <img src="../../../assets/zero.svg" alt="">
+            <h3 class="ml-md-4">
+                We could't find the data, due to some backend issuse <br>
+                Please try again later
+            </h3>
+        </div>
+    </div>
+    <div *ngIf="!isLoading && !isError">
+        <app-home [basicCoin]="basicCoin" (selectedCoin)="navigateToCoin($event)"></app-home>
+        <app-market [coinList]="coinList" (selectedCoin)="navigateToCoin($event)" (pageNumber)="pageChange($event)"></app-market>
+        <app-choose-us></app-choose-us>
+        <app-footer></app-footer>
+    </div>
+    
+</div>

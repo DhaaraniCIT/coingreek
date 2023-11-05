@@ -1,0 +1,78 @@
+#market {
+    background-color: #0f051d;
+    padding: 5rem 5rem;
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+    font-weight: bolder;
+    margin-bottom: 4rem;
+}
+
+.ta-theam {
+    background: linear-gradient(25deg,#2600fc,#ff00ea);
+    padding: 1rem;
+    color: white;
+}
+
+.table thead {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.table td {
+    border-top: none;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 1.5px solid white;
+    color: white;
+    padding: 25px 8px;
+    vertical-align: middle;
+    margin-bottom: -1px;
+}
+
+th, .table thead th {
+    border: none;
+    font-size: 22px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.coin-row {
+    padding: 25px 15px !important;
+    align-items: center;
+}
+
+.table tr:hover {
+    background-color: #200840;
+    cursor: pointer;
+}
+
+.gap {
+    margin-top: 3rem;
+    gap:1.3rem;
+}
+
+.paginator-btn {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+
+    #market {
+        padding: 70px 1rem;
+    }
+
+    .gap {
+        margin-top: 3rem;
+        gap:0.6rem;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+    
+}

@@ -1,0 +1,98 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+.header {
+    background-image: linear-gradient(0deg,#0f051d 30%,#130749 70%);
+    height: 100%;
+    width: 100%;
+}
+
+.home {
+    margin-top: 80px;
+}
+
+.secondry-home-text {
+    background-clip:text;
+    background-image: linear-gradient(25deg,#2600fc,#ff00ea);
+    color: transparent;
+    transition: all .3s;  
+}
+
+h1 {
+    font-size: 105px;
+    font-weight: bolder;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+.desktop {
+    display: block;
+}
+
+.basic-coins {
+    margin-top: 50px;
+    padding-bottom: 50px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+:host ::ng-deep .navbar-toggler-icon {
+    height: 1em !important;
+    width: 1em !important;
+}
+
+.btn-see-more {
+    background: linear-gradient(25deg,#2600fc,#ff00ea);
+    color: #f3f2f4;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 10rem;
+    padding: 1rem 2rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 425px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    img .btc-float {
+        display: none;
+    }
+    // .header {
+    //     background-image: linear-gradient(0deg,#0f051d 30%,#130749 70%);
+    //     height: 100%;
+    //     width: 100%;
+    // }
+    .desktop {
+        display: none;
+    }
+}
+
+@media (width: 768px) {
+    h1 {
+        font-size: 70px;
+    }
+
+    img .btc-float{
+        display: none;
+    }
+    // .header {
+    //     background-image: linear-gradient(0deg,#0f051d 30%,#130749 70%);
+    //     height: 100%;
+    //     width: 100%;
+    // }
+}
+
+@media (width: 1024px) {
+    h1 {
+        font-size: 80px;
+    }
+}

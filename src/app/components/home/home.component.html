@@ -1,0 +1,51 @@
+<div id="home">
+    <div class="header">
+        <div class="menu">
+            <app-header></app-header>
+        </div>
+        <div class="home">
+            <div class="container">
+                <div class="home-text">
+                    <div class="primery-home-text d-flex justify-content-between align-items-center">
+                        <div>
+                            <img class="btc-float" src="../../../assets/bitcoin.png" alt="floating-el" height="72px" width="72px">
+                        </div>
+                        <div>
+                            <h1 class="text-light text-center">
+                                TRACK AND TRADE
+                            </h1>
+                        </div>
+                        <div>
+                            <img class="btc-float" src="../../../assets/ethereum.png" alt="floating-el" height="75px" width="75px">
+                        </div>
+                    </div>
+                    <div class="secondry-home-text text-center">
+                        <h1>CRYPTO CURRENCIES</h1>
+                    </div>
+                </div>
+                <div class="basic-coins">
+                    <div class="d-none d-md-block">
+                        <div class="d-flex justify-content-around">
+                            <div *ngFor="let coin of basicCoin">
+                                <div class="text-center pointer" (click)="coinLink(coin)">
+                                    <img [src]="coin.image" alt="" srcset="" width="90" height="90" class="mb-1">
+                                    <p class="text-light mt-2">{{coin.name}} <span [ngClass]="getTextColor(coin.price_change_percentage_24h)">{{coin.price_change_percentage_24h | number:'1.2-2'}}%</span></p>
+                                    <p class="text-light mt-1">{{coin.current_price | currency}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-sm-block d-md-none mt-3">
+                        <div class="d-flex justify-content-center">
+                            <a href="#market">
+                                <button type="button" class="btn btn-see-more">
+                                    <p>See Prices</p>
+                                </button>
+                            </a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

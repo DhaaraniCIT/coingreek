@@ -1,0 +1,31 @@
+<div class="coin">
+    <div>
+        <app-header></app-header>
+    </div>
+    <div class="coin-detail container">
+        <div class="text-center coin-detail-img">
+            <img [src]="coinDetails.image.large" alt="" srcset="">
+            <h1>{{coinDetails.name}}</h1>
+            <h3>Rank: #{{coinDetails.coingecko_rank}}</h3>
+        </div>
+        <div class="coin-detail-text">
+            <div class="first-row">
+                <div>
+                    <h4>24h Change: <span [ngClass]="getTextColor(coinDetails.market_data.price_change_percentage_24h)">{{coinDetails.market_data.price_change_percentage_24h |  number:'1.2-2'}}%</span></h4>
+                </div>
+                <div>
+                    <h4>
+                        Price: <span [ngClass]="getTextColor(coinDetails.tickers[0].converted_last.usd)">{{coinDetails.tickers[0].converted_last.usd | currency}}</span>
+                    </h4>
+                </div>
+                <div>
+                    <h4>Symbol: {{coinDetails.symbol}}</h4>
+                </div>
+            </div>
+            <div class="second-row">
+                <p [innerHTML]="coinDetails.description.en">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
