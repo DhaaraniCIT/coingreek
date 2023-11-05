@@ -18,6 +18,8 @@ export class LandingComponent implements OnInit {
 
   isError: boolean = false;
 
+  currentPage: number = 1;
+
   constructor(
     private coingreekService: CoingreeksService,
     private router: Router
@@ -43,6 +45,7 @@ export class LandingComponent implements OnInit {
   }
 
   pageChange(numb: any) {
+    this.currentPage = numb;
     this.coingreekService.coinPagination(numb).subscribe((coin: any) => {
       this.coinList = coin
     })

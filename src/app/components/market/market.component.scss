@@ -60,6 +60,11 @@ th, .table thead th {
     font-size: 1.4rem;
 }
 
+.btn-color {
+    background: linear-gradient(25deg,#2600fc,#ff00ea);
+    color: white;
+}
+
 @media (max-width: 768px) {
 
     #market {

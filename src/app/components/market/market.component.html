@@ -28,7 +28,7 @@
     </div>
     <div class="d-flex justify-content-center gap">
       <div *ngFor="let i of [1,2,3,4,5]">
-        <button class="btn btn-light rounded-circle paginator-btn" (click)="pageChange(i)">
+        <button class="btn rounded-circle paginator-btn" [ngClass]="[currentPage === i ? 'btn-color' : 'btn-light']" (click)="pageChange(i)">
           {{i}}
         </button>
       </div>

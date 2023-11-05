@@ -14,6 +14,8 @@ export class MarketComponent implements OnInit {
 
   @Input() coinList: any;
 
+  @Input() currentPage: number | undefined;
+
   constructor() { }
 
   coinLink(coin:any) {
