@@ -8,8 +8,6 @@ import { CoingreeksService } from 'src/app/services/coingreeks.service';
 })
 export class MarketComponent implements OnInit {
 
-  @Output() selectedCoin = new EventEmitter();
-
   @Output() pageNumber = new EventEmitter();
 
   @Input() coinList: any;
@@ -17,10 +15,6 @@ export class MarketComponent implements OnInit {
   @Input() currentPage: number | undefined;
 
   constructor() { }
-
-  coinLink(coin:any) {
-    this.selectedCoin.emit(coin); 
-  }
 
   pageChange(i: number) {
     this.pageNumber.emit(i)

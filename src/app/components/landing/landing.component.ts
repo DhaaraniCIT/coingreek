@@ -26,18 +26,10 @@ export class LandingComponent implements OnInit {
   ) { }
 
   private setupPage() {
-    forkJoin([
-      this.coingreekService.getBasicCoins(),
-      this.coingreekService.coinPagination(1)
-    ]).subscribe((coins) => {
-      this.basicCoin = coins[0];
-      this.coinList = coins[1];
+      this.basicCoin = this.coingreekService.getBasicCoins();
+      this.coinList = this.coingreekService.coinPagination(1);
       this.isLoading = false;
       this.isError = false;
-    }, (error) => {
-      this.isLoading = false;
-      this.isError = true;
-    });
   }
 
   navigateToCoin(coin: any) {
@@ -46,9 +38,7 @@ export class LandingComponent implements OnInit {
 
   pageChange(numb: any) {
     this.currentPage = numb;
-    this.coingreekService.coinPagination(numb).subscribe((coin: any) => {
-      this.coinList = coin
-    })
+    this.coinList = this.coingreekService.coinPagination(this.currentPage)
   }
  
   ngOnInit(): void {

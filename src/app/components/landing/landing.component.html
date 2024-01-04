@@ -12,8 +12,8 @@
         </div>
     </div>
     <div *ngIf="!isLoading && !isError">
-        <app-home [basicCoin]="basicCoin" (selectedCoin)="navigateToCoin($event)"></app-home>
-        <app-market [coinList]="coinList" (selectedCoin)="navigateToCoin($event)" (pageNumber)="pageChange($event)" [currentPage]="currentPage"></app-market>
+        <app-home [basicCoin]="basicCoin" ></app-home>
+        <app-market [coinList]="coinList" (pageNumber)="pageChange($event)" [currentPage]="currentPage"></app-market>
         <app-choose-us></app-choose-us>
         <app-footer></app-footer>
     </div>

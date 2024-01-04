@@ -21,12 +21,6 @@ export class CoinComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const coin = this.router.snapshot.params['coin']
-    this.coingreekService.getCoinDetail(coin).subscribe((coins) => {
-      this.coinDetails = coins
-      console.log("cdc", this.coinDetails)
-      console.log('dede', this.coinDetails.price_change_percentage_24h)
-    })
   }
 
 }
